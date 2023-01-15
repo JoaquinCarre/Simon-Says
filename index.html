@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Dice!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>SIMON _ DICE</h1>
+            <div>
+                <!-- <select id="difficulty" name="difficulty">
+                    <option value="" disabled selected>
+                        <h3>Seleccionar dificultad</h3>
+                    </option>
+                    <option value="easy">Fácil</option>
+                    <option value="hard">Difícil</option>
+                </select> -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="game-container">
+            <div id="simon-game">
+                <div id="game-board">
+                    <img src="./img/bordesSimon.png" alt="borde Simon Dice" id="bordeSimon">
+                    <button id="button-yellow">
+                        <img src="./img/botonAmarillo.png" width="194px" alt="boton amarillo Simon Dice">
+                    </button>
+                    <audio id="audio-yellow" src="./audio/Re.mp3"></audio>
+                    <button id="button-green">
+                        <img src="./img/botonVerde.png" width="194px" alt="boton verde Simon Dice">
+                    </button>
+                    <audio id="audio-green" src="./audio/Mi.mp3"></audio>
+                    <button id="button-orange">
+                        <img src="./img/botonCentralNaranja.png" width="154px" alt="boton centro Simon Dice">
+                    </button>
+                    <audio id="audio-orange" src="./audio/Sol.mp3"></audio>
+                    <button id="button-red">
+                        <img src="./img/botonRojo.png" width="194px" alt="boton rojo Simon Dice">
+                    </button>
+                    <audio id="audio-red" src="./audio/La.mp3"></audio>
+                    <button id="button-blue">
+                        <img src="./img/botonAzul.png" width="194px" alt="boton azul Simon Dice">
+                    </button>
+                    <audio id="audio-blue" src="./audio/Si.mp3"></audio>
+                </div>
+            </div>
+            <div id="game-display">
+                <h2>
+                    <p id="level-display">Level: 1</p>
+                </h2>
+                <p id="message-display"></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="game.js"></script>
+</body>
+
+</html>
