@@ -1,4 +1,4 @@
-# Simon Says 1.0
+# Simon Says v1.0
 This is a playable versión of the Simon Says Game. It's on the Hard mode where every level has a different sequence of buttons.
 
 ## Upcoming updates for next versions
