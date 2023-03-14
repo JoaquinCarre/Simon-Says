@@ -10,20 +10,41 @@ const audioRed = document.getElementById('audio-red');
 const audioBlue = document.getElementById('audio-blue');
 const levelDisplay = document.getElementById('level-display');
 const messageDisplay = document.getElementById('message-display');
+const select = document.getElementById('difficulty');
 
 let gameSequence = [];
 let playerProgress = 0;
 let currentLevel = 1;
+let hardmode = false;
+
+//Selección de dificultad
+select.addEventListener('change', function() {
+  const selectedOption = select.value;
+  if (selectedOption === 'easy') {
+    hardmode = false;
+  } else {
+    hardmode = true;
+  }
+  console.log(`Se seleccionó la opción hard? ${hardmode}`);
+});
 
 function generateSequence() {
-  gameSequence = [];
-  for (let i = 0; i < currentLevel; i++) {
+  if(hardmode) {
+    gameSequence = [];
+    for (let i = 0; i < currentLevel; i++) {
+      gameSequence.push(getRandomColor());
+    }
+    levelDisplay.textContent = `Level: ${currentLevel}`;
+    playerProgress = 0;
+    messageDisplay.textContent = '';
+    showSequence();
+  } else {
     gameSequence.push(getRandomColor());
+    levelDisplay.textContent = `Level: ${currentLevel}`;
+    playerProgress = 0;
+    messageDisplay.textContent = '';
+    showSequence();
   }
-  levelDisplay.textContent = `Level: ${currentLevel}`;
-  playerProgress = 0;
-  messageDisplay.textContent = '';
-  showSequence();
 }
 
 function showSequence() {
