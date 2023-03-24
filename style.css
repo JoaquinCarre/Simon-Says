@@ -17,6 +17,17 @@ h1, #level-display {
   font-family: 'Monoton', cursive;
 }
 
+#start-button {
+  background-color: transparent;
+  border: 2px dashed black;
+  border-radius: 25px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-family: 'Monoton', cursive;
+  font-size: 32px;
+  font-weight: bold;
+}
+
 #difficulty {
   font-size: 1.2em;
   padding: 15px;

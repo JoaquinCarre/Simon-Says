@@ -8,9 +8,10 @@ const audioGreen = document.getElementById('audio-green');
 const audioOrange = document.getElementById('audio-orange');
 const audioRed = document.getElementById('audio-red');
 const audioBlue = document.getElementById('audio-blue');
+const startButton = document.getElementById('start-button');
+const select = document.getElementById('difficulty');
 const levelDisplay = document.getElementById('level-display');
 const messageDisplay = document.getElementById('message-display');
-const select = document.getElementById('difficulty');
 
 let gameSequence = [];
 let playerProgress = 0;
@@ -82,6 +83,9 @@ function handleInput(color) {
     /* alert('Game over! Press Accept button to try again.'); */
     gameSequence = [];
     currentLevel = 1;
+    startButton.style.display="block";
+    select.style.display="block";
+    levelDisplay.textContent = `Level: ${currentLevel}`;
   } else {
     playerProgress++;
     if (playerProgress >= gameSequence.length) {
@@ -151,10 +155,8 @@ buttonBlue.addEventListener("mouseup", () => {
   }, 300);
 });
 
-document.body.addEventListener('click', () => {
-  if (gameSequence.length === 0) {
-    generateSequence();
-  }
+startButton.addEventListener('click', () => {
+  startButton.style.display="none";
+  select.style.display="none";
+  generateSequence();
 });
-
-generateSequence();
